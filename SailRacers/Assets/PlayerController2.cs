@@ -29,15 +29,15 @@ public class PlayerController2 : MonoBehaviour {
 		point = Mathf.RoundToInt (transform.rotation.eulerAngles.z);
 		Debug.Log (point);
 		if (point == 225 || point == 135) {
-			speed = 4;
+			speed = 3;
 		} else if (point == 180) {
 			speed = 0.5f;
 		} else if (point == 270 || point == 90) {
-			speed = 5;
+			speed = 4.5f;
 		} else if (point == 315 || point == 45) {
-			speed = 4;
+			speed = 4f;
 		} else if (point == 0) {
-			speed = 2.5f;
+			speed = 3.5f;
 		}
 			
 	}
