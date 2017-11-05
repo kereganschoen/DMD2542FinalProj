@@ -19,7 +19,8 @@ public class PlayerController : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		
-		variwind = Mathf.Abs ((Mathf.RoundToInt(gameObject.transform.localEulerAngles.z) - windDir) %360 )/45;
+		variwind = Mathf.Abs (Mathf.CeilToInt((Mathf.RoundToInt(gameObject.transform.localEulerAngles.z) - windDir) %360 )/45);
+		Debug.Log((Mathf.CeilToInt((Mathf.RoundToInt(gameObject.transform.localEulerAngles.z) - windDir) %360 )/45));
 		totalSpeed = (speed * windSpeed) - variwind;
 
 		if (totalSpeed <= 1)
@@ -39,7 +40,7 @@ public class PlayerController : MonoBehaviour {
 			
 			windMarker.transform.rotation = Quaternion.Euler (0, 0, -windDir);
 		} else {
-			windMarker.transform.rotation = Quaternion.Euler (0, 0, -windDir);
+			windMarker.transform.rotation = Quaternion.Euler (0, 0, windDir);
 		}
 	
 	}

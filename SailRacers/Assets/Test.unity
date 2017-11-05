@@ -245,7 +245,7 @@ SpriteRenderer:
   m_Sprite: {fileID: 21300000, guid: db7aa223cf7c542189549537f894c9c4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
-  m_FlipY: 0
+  m_FlipY: 1
   m_DrawMode: 0
   m_Size: {x: 0.26, y: 0.37}
   m_AdaptiveModeThreshold: 0.5
@@ -303,6 +303,7 @@ GameObject:
   - component: {fileID: 1127997895}
   - component: {fileID: 1127997894}
   - component: {fileID: 1127997896}
+  - component: {fileID: 1127997897}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -373,7 +374,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1127997893}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7a82f06b12667483f9847b62040e7a82, type: 3}
   m_Name: 
@@ -381,6 +382,18 @@ MonoBehaviour:
   speed: 1
   point: 0
   windSpeed: 4
-  windDir: 90
+  windDir: 45
   totalSpeed: 0
   windMarker: {fileID: 474456802}
+--- !u!114 &1127997897
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1127997893}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed7cc3f2752854459b38e11ac7d3d126, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 1
