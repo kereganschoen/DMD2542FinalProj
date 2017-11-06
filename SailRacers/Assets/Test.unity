@@ -123,6 +123,7 @@ GameObject:
   - component: {fileID: 411409718}
   - component: {fileID: 411409717}
   - component: {fileID: 411409716}
+  - component: {fileID: 411409720}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -192,6 +193,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &411409720
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 411409715}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29b62122efb1b48f89614da21ab5c924, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 1127997893}
 --- !u!1 &474456802
 GameObject:
   m_ObjectHideFlags: 0
@@ -201,6 +214,7 @@ GameObject:
   m_Component:
   - component: {fileID: 474456804}
   - component: {fileID: 474456803}
+  - component: {fileID: 474456805}
   m_Layer: 0
   m_Name: Wind
   m_TagString: Untagged
@@ -242,10 +256,10 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: db7aa223cf7c542189549537f894c9c4, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 5f4a7b23dc7af4f0da9669cd60bd7fcf, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
-  m_FlipY: 1
+  m_FlipX: 1
+  m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 0.26, y: 0.37}
   m_AdaptiveModeThreshold: 0.5
@@ -265,6 +279,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &474456805
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 474456802}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2840d9c61602e4be3af71e14ea7d6f44, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  windDir: 180
 --- !u!1 &716330740
 GameObject:
   m_ObjectHideFlags: 0
@@ -396,4 +422,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed7cc3f2752854459b38e11ac7d3d126, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  baseSpeed: 0
   speed: 1
+  gameController: {fileID: 474456802}
